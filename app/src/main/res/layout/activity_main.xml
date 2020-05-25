@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_showOtherDates="all"
+        app:mcv_selectionColor="#7cfc00"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/day_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:textSize="12sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/checkboxs"
+            android:layout_margin="10dp"
+            >
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="上午"
+                android:id="@+id/check_morning"
+
+                />
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="下午"
+                android:id="@+id/check_afternoon"
+                />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="价格："
+            android:textSize="24sp"
+            />
+        <EditText
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="value"
+            android:singleLine="true"
+            android:numeric="integer"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/add_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加入价格"
+        android:layout_marginHorizontal="10dp"
+        />
+
+    <Button
+        android:id="@+id/delete_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除价格"
+        android:layout_marginHorizontal="10dp"
+        />
+
+    <Button
+        android:id="@+id/analysis_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本周价格分析"
+        android:layout_marginHorizontal="10dp"
+        />
+
+
+</LinearLayout>
